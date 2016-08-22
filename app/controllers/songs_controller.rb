@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+
   def index
     @songs = Song.all
   end
@@ -12,7 +13,12 @@ class SongsController < ApplicationController
   end
 
   def create
+    # byebug
     @song = Song.new(song_params)
+    @song.artist_name = params[:song][:artist_name]
+    @song.genre_id = params[:song][:genre_name]
+    # byebug
+    @song.note_contents = params[:song][:notes]
 
     if @song.save
       redirect_to @song

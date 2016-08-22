@@ -9,11 +9,11 @@ RSpec.describe Song, type: :model do
     end
   end
 
-  describe 'genre_name' do
+  describe 'genre_named' do
     it 'returns the genre name' do
       song = Song.new
       song.genre_name = 'Rock'
-      expect(song.genre_name).to eq 'Rock'
+      expect(song.genre_named).to eq 'Rock'
     end
   end
 
@@ -25,11 +25,11 @@ RSpec.describe Song, type: :model do
     end
   end
 
-  describe 'artist_name' do
+  describe 'artist_named' do
     it 'returns the artist name' do
       song = Song.new
       song.artist_name = 'Rock Hudson'
-      expect(song.artist_name).to eq 'Rock Hudson'
+      expect(song.artist_named).to eq 'Rock Hudson'
     end
   end
 
